@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class JS</title>
+<script   src="https://code.jquery.com/jquery-3.0.0.min.js" ></script>
+
+<script src="https://use.fontawesome.com/6d74f7546b.js"></script>
+</head>
+<body>
+
+<h2>Fonction JS</h2>
+
+<p>Ajouter d'un champs de vote</p>
+
+<form action="" method="GET">	
+	<input type="hidden" name="star_vote" id="star_vote" class="checkVote" />
+	<input type="hidden" name="flag_vote" id="flag_vote" class="checkVote" />
+	<input type="hidden" name="folder_vote" id="folder_vote" class="checkVote" />
+	<button type="submit">Test</button>
+</form>
+
+
+<script type="text/javascript" src="G:/LABS/addon/js/checkvote.js"></script>
+<script type="text/javascript">
+	$('#star_vote').checkVote({"nombre":5,"class_on":"fa fa-star","class_off":"fa fa-star-o"});
+	$('#flag_vote').checkVote({"nombre":15,"class_on":"fa fa-flag","class_off":"fa fa-flag-o","taille_etoiles":30});
+	$('#folder_vote').checkVote({"nombre":5,"class_on":"fa fa-folder","class_off":"fa fa-folder-o"});
+</script>
+
+
+</body>
+</html>
