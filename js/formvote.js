@@ -1,7 +1,7 @@
 /*
 exemple!
-$('#temoignage_produit').checkVote({"nombre":5,"class_on":"fa fa-star","class_off":"fa fa-star-o"});
-<input type="hidden" name="temoignage_note" id="temoignage_produit" class="checkVote" />
+$('#temoignage_produit').formVote({"nombre":5,"class_on":"fa fa-star","class_off":"fa fa-star-o"});
+<input type="hidden" name="temoignage_note" id="temoignage_produit" class="formVote" />
  */
 
 (function($){
@@ -13,16 +13,16 @@ $('#temoignage_produit').checkVote({"nombre":5,"class_on":"fa fa-star","class_of
          ,display_note   : false    // afficher la note ou pas
     };
 
-    $.checkVote = function(el,options) {};
-    $.checkVote.options = options;
+    $.formVote = function(el,options) {};
+    $.formVote.options = options;
 
-    $.fn.checkVote = function(opts){
+    $.fn.formVote = function(opts){
         return this.each(function(){
-            var options = $.extend({},$.checkVote.options,opts);
+            var options = $.extend({},$.formVote.options,opts);
             var composant=$(this);
             var Currentpos=0;
 
-            var html='<div class="checkVote_body" style="font-size: '+options.taille_etoiles+'px">';
+            var html='<div class="formVote_body" style="font-size: '+options.taille_etoiles+'px">';
             for(var nbEtoile=1;nbEtoile<=options.nombre;nbEtoile++){
                 html=html+'<span style="display: inline-block;cursor:pointer;" id="note'+nbEtoile+'" class="note '+options.class_off+'"></span>';
             }
@@ -34,7 +34,7 @@ $('#temoignage_produit').checkVote({"nombre":5,"class_on":"fa fa-star","class_of
 
             //creation des etoiles
             composant.after(html);
-            var blocstars=composant.next(".checkVote_body");
+            var blocstars=composant.next(".formVote_body");
             var stars=blocstars.find(".note");
 
             stars.mouseout(function(){
