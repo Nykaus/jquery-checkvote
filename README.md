@@ -30,8 +30,8 @@ Basic example
 ------
 
 ```html
-	<input type="hidden" name="star_vote" id="star_vote" class="checkVote" />
+	<input type="hidden" name="star_vote" id="star_vote" class="formVote" />
 ```
 ```js
-	$('#star_vote').checkVote({"nombre":5,"class_on":"fa fa-star","class_off":"fa fa-star-o"});
+	$('#star_vote').formVote({"nombre":5,"class_on":"fa fa-star","class_off":"fa fa-star-o"});
 ```
